@@ -11,9 +11,24 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(
-      title: const Text("my portfolioApp"),
-    ));
+    return const Scaffold(
+      body: Padding(
+        padding: EdgeInsets.only(top: 100, left: 20),
+        child: Column(
+          children: <Widget>[
+            Row(
+              children: <Widget>[
+                CircleAvatar(
+                  radius: 60,
+                ),
+                Column(
+                  children: <Widget>[Text("Name"), Text("Designation")],
+                )
+              ],
+            )
+          ],
+        ),
+      ),
+    );
   }
 }
